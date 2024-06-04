@@ -99,16 +99,16 @@ textarea:not([rows]) {
   flex-wrap: wrap;
   width: 482px;
   border: 1px solid blue;
-  height: 484px;
+  height: 480px;
 }
 
 .grid__container div {
   width: 30px;
   height: 30px;
-  border: 1px solid red;
 }
 
 .square {
+    border: 1px solid red;
 }
 
 .sketched {
