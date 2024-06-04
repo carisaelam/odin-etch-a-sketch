@@ -12,16 +12,16 @@ const gridContainer = document.querySelector(".grid__container");
 const inputForm = document.querySelector(".input__form");
 const submitButton = document.querySelector(".submit__button");
 const inputNumber = document.querySelector(".input__number");
-const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "purple"];
 
 //Functions
 
 buildGrid(16);
 
 function generateRandomColor() {
-  const color1 = Math.floor(Math.random() * 256);
-  const color2 = Math.floor(Math.random() * 256);
-  const color3 = Math.floor(Math.random() * 256);
+  const color1 = Math.floor(Math.random() * 250);
+  const color2 = Math.floor(Math.random() * 250);
+  const color3 = Math.floor(Math.random() * 250);
   return `rgb(${color1}, ${color2}, ${color3})`;
 }
 
