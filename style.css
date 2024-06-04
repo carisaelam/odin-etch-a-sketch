@@ -103,7 +103,6 @@ textarea:not([rows]) {
 }
 
 .grid__container div {
-  
 }
 
 .square {
@@ -112,4 +111,17 @@ textarea:not([rows]) {
 
 .sketched {
   background-color: blue;
+}
+
+.input__number {
+  padding: 0 1rem;
+}
+
+.input__number::-webkit-inner-spin-button,
+.input__number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input__number {
+  -moz-appearance: textfield;
 }
