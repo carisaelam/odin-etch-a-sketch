@@ -12,10 +12,18 @@ const gridContainer = document.querySelector(".grid__container");
 const inputForm = document.querySelector(".input__form");
 const submitButton = document.querySelector(".submit__button");
 const inputNumber = document.querySelector(".input__number");
+const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 
 //Functions
 
 buildGrid(16);
+
+function generateRandomColor() {
+  const color1 = Math.floor(Math.random() * 256);
+  const color2 = Math.floor(Math.random() * 256);
+  const color3 = Math.floor(Math.random() * 256);
+  return `rgb(${color1}, ${color2}, ${color3})`;
+}
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -23,11 +31,15 @@ function handleSubmit(e) {
   console.log("submitted", selectedSquareCount);
   buildGrid(selectedSquareCount);
 }
+let coloredSquares = [];
 
 function sketch(e) {
   hoveredSquare = e.target;
-  console.log(hoveredSquare.id);
-  hoveredSquare.setAttribute("class", "sketched");
+  const randomColor = generateRandomColor();
+  if (!coloredSquares.includes(hoveredSquare.id)) {
+    hoveredSquare.style.backgroundColor = randomColor;
+  }
+  coloredSquares.push(hoveredSquare.id);
 }
 
 function buildGrid(squareCount) {
